@@ -182,6 +182,11 @@ export default class VerticalSlider extends React.Component<props, state> {
     if (nextProps.value && nextProps.value !== nextState.value) {
       this._changeState(nextProps.value);
     }
+
+    if(nextProps.minimumTrackTintColor !== this.props.minimumTrackTintColor) {
+      return true;
+    }
+
     return false;
   }
 
